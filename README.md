@@ -1,5 +1,7 @@
 # Fluent Logger for Java
 
+Forked from https://github.com/fluent/fluent-logger-java.
+
 ## Overview
 
 Many web/mobile applications generate huge amount of event logs (c,f. login,
@@ -20,14 +22,6 @@ Java >= 1.6
 
 ## Install
 
-### Install with all-in-one jar file
-
-You can download all-in-one jar file for Fluent Logger for Java.
-
-    $ wget http://fluentd.org/releases/java/fluent-logger-${logger.version}-jar-with-dependencies.jar
-
-To use Fluent Logger for Java, set the above jar file to your classpath.
-
 ### Install from Maven2 repository
 
 Fluent Logger for Java is released on Fluent Maven2 repository.  You can 
@@ -36,27 +30,23 @@ configure your pom.xml as follows to use it:
     <dependencies>
       ...
       <dependency>
-        <groupId>org.fluentd</groupId>
+        <groupId>com.bericotech.fork.org.fluentd</groupId>
         <artifactId>fluent-logger</artifactId>
         <version>${logger.version}</version>
       </dependency>
+
+      <repositories>
+        <repository>
+         <id>nexus.bericotechnologies.com</id>
+         <name>Berico Technologies Nexus</name>
+         <url>http://nexus.bericotechnologies.com/content/groups/public</url>
+         <releases><enabled>true</enabled></releases>
+         <snapshots><enabled>true</enabled></snapshots>
+        </repository>
+      </repositories>
       ...
     </dependencies>
 
-
-### Install from Github repository
-
-You can get latest source code using git.
-
-    $ git clone git@github.com:fluent/fluent-logger-java.git
-    $ cd fluent-logger-java
-    $ mvn assembly:assembly
-
-You will get the fluent logger jar file in fluent-logger-java/target 
-directory.  File name will be fluent-logger-${logger.version}-jar-with-dependencies.jar.
-For more detail, see pom.xml.
-
-**Replace ${logger.version} with the current version of Fluent Logger for Java.**
 
 ## Quickstart
 

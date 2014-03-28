@@ -2,7 +2,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 
   <modelVersion>4.0.0</modelVersion>
-  <groupId>org.fluentd</groupId>
+  <groupId>com.bericotech.fork.org.fluentd</groupId>
   <artifactId>fluent-logger</artifactId>
   <name>Fluent Logger for Java</name>
   <description>Java implementation of structured logger for Fluent.</description>
@@ -24,12 +24,6 @@
     </license>
   </licenses>
 
-  <scm>
-    <connection>scm:git:git://github.com/fluent/fluent-logger-java.git</connection>
-    <developerConnection>scm:git:git@github.com:fluent/fluent-logger-java.git</developerConnection>
-    <url>scm:git:git://github.com/fluent/fluent-logger-java.git</url>
-  </scm>
-
   <developers>
     <developer>
       <id>muga</id>
@@ -37,11 +31,6 @@
       <email>muga.nishizawa@gmail.com</email>
     </developer>
   </developers>
-
-  <issueManagement>
-    <system>GitHub</system>
-    <url>https://github.com/fluent/fluent-logger-java/issues</url>
-  </issueManagement>
 
   <dependencies>
     <dependency>
@@ -73,6 +62,20 @@
       <url>file://${basedir}/mvn-local</url>
     </repository>
   </repositories>
+
+  <distributionManagement>
+    <repository>
+        <id>nexus.bericotechnologies.com</id>
+        <name>Berico Technologies Nexus</name>
+        <url>http://nexus.bericotechnologies.com/content/repositories/releases/</url>
+    </repository>
+
+    <snapshotRepository>
+        <id>nexus.bericotechnologies.com</id>
+        <name>Berico Technologies Nexus</name>
+        <url>http://nexus.bericotechnologies.com/content/repositories/snapshots/</url>
+    </snapshotRepository>
+  </distributionManagement>
 
   <build>
     <resources>
